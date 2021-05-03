@@ -13,7 +13,6 @@
  *	and used half that value as it was most accurate in not being too large or too small.
  *	I attempted to use the MAX given when shining the flashlight from ex. 2  but that value was much 
  *	too large for the photoresistor to react to normal room lighting. 
- *
  *	I acknowledge all content contained herein, excluding template or example
  *	code, is my own original work.
  *
@@ -45,7 +44,7 @@ int main(void) {
 	//call initialization to Analog -> Digital for microcontroller
 	ADC_init();
 
-	int MAX = 0x0FF;//max value from light in room hitting photoresistor
+	int MAX = 0x300;//max value from light in room hitting photoresistor
 
 	int lightThreshold = MAX / 2; //value used to determine if LED should light 
 
